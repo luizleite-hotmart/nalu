@@ -8,7 +8,9 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class FeatureVO implements Serializable{
+
     private Long id;
     private String description;
     private String urlForTest;
+
 }
