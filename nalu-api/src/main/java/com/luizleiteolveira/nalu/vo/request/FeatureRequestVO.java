@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-public class FeatureVO implements Serializable{
+public class FeatureRequestVO implements Serializable{
 
     private Long id;
     private String description;

@@ -1,4 +1,4 @@
-package com.luizleiteolveira.nalu.vo.request.response;
+package com.luizleiteolveira.nalu.vo.response;
 
 import com.luizleiteolveira.nalu.entity.Feature;
 import lombok.Getter;
