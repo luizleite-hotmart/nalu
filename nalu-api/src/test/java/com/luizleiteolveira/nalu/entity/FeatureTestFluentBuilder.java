@@ -22,4 +22,7 @@ public class FeatureTestFluentBuilder {
         return this;
     }
 
+    public Feature build() {
+        return feature;
+    }
 }
