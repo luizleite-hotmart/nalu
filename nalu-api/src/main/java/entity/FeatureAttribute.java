@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.lang.reflect.Field;
 
 @Data
 @Entity
@@ -28,4 +30,7 @@ public class FeatureAttribute implements Serializable{
     @ManyToOne
     @JoinColumn(name = "feature_id", nullable = false)
     private Feature feature;
+
+    @Column(name = "field", nullable = false)
+    private Field field;
 }
