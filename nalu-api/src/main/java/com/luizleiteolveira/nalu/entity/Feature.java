@@ -1,4 +1,4 @@
-package entity;
+package com.luizleiteolveira.nalu.entity;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.URL;

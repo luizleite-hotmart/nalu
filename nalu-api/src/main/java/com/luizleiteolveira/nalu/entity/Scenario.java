@@ -1,36 +1,36 @@
-package entity;
+package com.luizleiteolveira.nalu.entity;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.lang.reflect.Field;
+import java.util.List;
 
 @Data
 @Entity
-@Table(name = "feature_attribute")
-public class FeatureAttribute implements Serializable{
+@Table(name = "scenario")
+public class Scenario implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "base_scenario")
+    private Boolean baseScenario = Boolean.FALSE;
+    @Column(name = "description")
+    private String description;
     @NotNull
-    @ManyToOne
     @JoinColumn(name = "feature_id", nullable = false)
     private Feature feature;
-
-    @Column(name = "type", nullable = false)
-    private Class type;
+    @OneToMany(mappedBy = "scenario", cascade = CascadeType.ALL)
+    private List<ScenarioAtribute> scenarioAtributeList;
 }
