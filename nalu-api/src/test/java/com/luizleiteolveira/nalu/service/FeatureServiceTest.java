@@ -8,13 +8,16 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 import static com.luizleiteolveira.nalu.entity.FeatureTestFluentBuilder.featureBuilder;
 

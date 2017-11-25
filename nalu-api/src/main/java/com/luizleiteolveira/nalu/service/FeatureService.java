@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,9 +28,17 @@ public class FeatureService {
 
     public List<FeatureResponseVO> findActiveFeatures() {
         List<Feature> featureList = featureRepository.findAllByActiveIsTrue();
-        Type targetListType = new TypeToken<List<FeatureResponseVO>>() {}.getType();
-        List<FeatureResponseVO> featureResponseVOList = mapper.map(featureList, targetListType);
+        List<FeatureResponseVO> featureResponseVOList = converListOfFeaturesInResponseVO(featureList);
         return featureResponseVOList;
     }
+
+    private List<FeatureResponseVO> converListOfFeaturesInResponseVO (List<Feature> featureList) {
+        List<FeatureResponseVO> featureResponseVOList = new ArrayList<>();
+        featureList.forEach(feature -> {
+            featureResponseVOList.add(new FeatureResponseVO(feature));
+        });
+        return featureResponseVOList;
+    }
+
 
 }
