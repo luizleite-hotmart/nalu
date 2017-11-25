@@ -12,5 +12,6 @@ public class FeatureRequestVO implements Serializable{
     private Long id;
     private String description;
     private String urlForTest;
+    private Boolean active = Boolean.FALSE;
 
 }
