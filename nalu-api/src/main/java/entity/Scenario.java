@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class Scenario implements Serializable {
 
     private Long id;
+    private Boolean baseScenario;
     private String description;
-
+    private Feature feature;
 }
