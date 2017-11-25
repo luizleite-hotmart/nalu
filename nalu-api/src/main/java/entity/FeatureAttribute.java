@@ -31,6 +31,6 @@ public class FeatureAttribute implements Serializable{
     @JoinColumn(name = "feature_id", nullable = false)
     private Feature feature;
 
-    @Column(name = "field", nullable = false)
-    private Field field;
+    @Column(name = "type", nullable = false)
+    private Class type;
 }
