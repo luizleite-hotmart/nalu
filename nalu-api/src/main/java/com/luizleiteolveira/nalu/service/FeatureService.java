@@ -19,20 +19,17 @@ public class FeatureService {
 
     public List<FeatureResponseVO> findActiveFeatures() {
         List<Feature> featureList = featureRepository.findAllByActiveIsTrue();
-        List<FeatureResponseVO> featureResponseVOList = converListOfFeaturesInResponseVO(featureList);
-        return featureResponseVOList;
+        return converListOfFeaturesInResponseVO(featureList);
     }
 
     private List<FeatureResponseVO> converListOfFeaturesInResponseVO (List<Feature> featureList) {
         List<FeatureResponseVO> featureResponseVOList = new ArrayList<>();
-        featureList.forEach(feature -> {
-            featureResponseVOList.add(new FeatureResponseVO(feature));
-        });
+        featureList.forEach(feature -> featureResponseVOList.add(new FeatureResponseVO(feature)));
         return featureResponseVOList;
     }
 
     public FeatureResponseVO saveOrUpdateFeature(FeatureRequestVO featureRequestVO) {
-        Feature feature = null;
+        Feature feature;
         if (featureRequestVO.getId() != null) {
             feature = featureRepository.findOne(featureRequestVO.getId());
         } else {
