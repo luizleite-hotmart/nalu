@@ -3,7 +3,7 @@ package com.luizleiteolveira.nalu.service;
 
 import com.luizleiteolveira.nalu.entity.Feature;
 import com.luizleiteolveira.nalu.repository.FeatureRepository;
-import com.luizleiteolveira.nalu.repository.ScenarioRepository;
+import com.luizleiteolveira.nalu.vo.request.FeatureRequestVO;
 import com.luizleiteolveira.nalu.vo.response.FeatureResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,9 +17,6 @@ public class FeatureService {
     @Autowired
     private FeatureRepository featureRepository;
 
-    @Autowired
-    private ScenarioRepository scenarioRepository;
-
     public List<FeatureResponseVO> findActiveFeatures() {
         List<Feature> featureList = featureRepository.findAllByActiveIsTrue();
         List<FeatureResponseVO> featureResponseVOList = converListOfFeaturesInResponseVO(featureList);
@@ -32,6 +29,21 @@ public class FeatureService {
             featureResponseVOList.add(new FeatureResponseVO(feature));
         });
         return featureResponseVOList;
+    }
+
+    public FeatureResponseVO saveOrUpdateFeature (FeatureRequestVO featureRequestVO) {
+        Feature feature = null;
+        if (featureRequestVO.getId() != null) {
+            feature = featureRepository.findOne(featureRequestVO.getId());
+        } else {
+            feature = new Feature();
+        }
+
+        feature.setUrlForTest(featureRequestVO.getUrlForTest());
+        feature.setDescription(featureRequestVO.getDescription());
+        feature.setActive(featureRequestVO.getActive());
+        feature = featureRepository.save(feature);
+        return new FeatureResponseVO(feature);
     }
 
 
