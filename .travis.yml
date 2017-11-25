@@ -1,5 +1,5 @@
 script:
- - cd nalu-api
+ - cd nalu-api/
 language: java
 jdk:
  - oraclejdk8
