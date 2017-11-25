@@ -22,6 +22,7 @@ public class FeatureService {
     @Autowired
     private ScenarioRepository scenarioRepository;
 
+    @Autowired
     private ModelMapper mapper;
 
     public List<FeatureResponseVO> findActiveFeatures() {
