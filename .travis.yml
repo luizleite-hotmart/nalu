@@ -1,3 +1,4 @@
+cd $TRAVIS_BUILD_DIR/nalu-api
 language: java
 jdk:
  - oraclejdk8
