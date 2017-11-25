@@ -1,6 +1,6 @@
 script:
  - cd nalu-api/
- - mvn clean install
+ - mvn clean install -DskipTests
 language: java
 jdk:
  - oraclejdk8
