@@ -36,4 +36,7 @@ public class Feature implements Serializable{
     @OneToMany(mappedBy = "feature", cascade = CascadeType.ALL)
     private List<FeatureAttribute> attributeList;
 
+    @Column(name = "active")
+    private Boolean active;
+
 }
