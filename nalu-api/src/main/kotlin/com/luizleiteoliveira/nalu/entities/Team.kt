@@ -1,7 +1,12 @@
 package com.luizleiteoliveira.nalu.entities
 
-data class Team(
+import kotlinx.nosql.Id
+import kotlinx.nosql.mongodb.DocumentSchema
+import kotlinx.nosql.string
 
-        val id: Long,
-        val name: String
-)
+object Teams : DocumentSchema<Team>("teams", Team::class) {
+    val id  = string("id")
+    val name = string("name")
+}
+
+data class Team(val id: Id<String, Teams>? = null, val name: String)
