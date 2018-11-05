@@ -5,8 +5,13 @@ import kotlinx.nosql.mongodb.DocumentSchema
 import kotlinx.nosql.string
 
 object Teams : DocumentSchema<Team>("teams", Team::class) {
-    val id  = string("id")
     val name = string("name")
+
+    init {
+        ensureIndex(text = arrayOf(name))
+    }
 }
 
-data class Team(val id: Id<String, Teams>? = null, val name: String)
+data class Team(val name: String) {
+    val id: Id<String, Teams>? = null
+}
