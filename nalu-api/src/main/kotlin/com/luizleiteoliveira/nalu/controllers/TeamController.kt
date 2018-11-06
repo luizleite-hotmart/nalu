@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping(value="/teams")
 class TeamController @Autowired constructor() {
 
-
-
-
     @GetMapping
     fun createTeam(@RequestParam (value = "name", defaultValue = "Luiz") name: String) : String {
         return "seja bem vindo $name"
