@@ -3,4 +3,4 @@ package com.luizleiteoliveira.nalu.entities
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document(collection = "team")
-data class Team(val name: String)
+data class Team(val name: String, val id: String)
