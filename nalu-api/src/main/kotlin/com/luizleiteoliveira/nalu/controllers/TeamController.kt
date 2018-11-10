@@ -22,4 +22,10 @@ class TeamController {
         return newTeam
     }
 
+    @GetMapping
+    fun findTeam(@RequestParam (value = "name", defaultValue = "Luiz") name: String) : List<Team> {
+        val teamsFound = teamService.findTeams(name)
+        return teamsFound;
+    }
+
 }
