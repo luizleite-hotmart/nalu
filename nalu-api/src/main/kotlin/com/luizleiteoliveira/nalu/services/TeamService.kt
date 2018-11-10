@@ -18,4 +18,7 @@ class TeamService {
         return returnTeam
     }
 
+    fun findTeams(name: String): List<Team> {
+        return teamRepository.findTeamByName(name)
+    }
 }
