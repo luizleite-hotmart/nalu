@@ -1,7 +1,6 @@
 package com.luizleiteoliveira.nalu.controllers
 
 import com.luizleiteoliveira.nalu.entities.Team
-import com.luizleiteoliveira.nalu.repositories.TeamRepository
 
 import com.luizleiteoliveira.nalu.services.TeamService
 import org.springframework.beans.factory.annotation.Autowired

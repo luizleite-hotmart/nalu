@@ -13,7 +13,7 @@ class TeamService {
     }
 
     fun createTeam(name: String): Team {
-        val team = Team("55 $name", "luiz-team")
+        val team = Team("team-$name", name)
         val returnTeam = teamRepository.insert(team)
         return returnTeam
     }
