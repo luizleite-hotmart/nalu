@@ -2,12 +2,15 @@ package com.luizleite.entity
 
 import java.util.*
 import javax.persistence.Entity
+import javax.persistence.Id
 
 @Entity
 class Operation(var stockName: String, var operationDate: Date,
                 var count: Long, var value: Double, var taxes: Double,
                 var broker: String) {
     var total: Double = calcTotal()
+
+    @Id
     var id: String = UUID.randomUUID().toString()
     constructor(stockName: String, operationDate: Date, count: Long, value: Double, broker: String) :
             this(
