@@ -66,6 +66,10 @@
       <artifactId>quarkus-jdbc-mysql</artifactId>
       <version>0.23.2</version>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
