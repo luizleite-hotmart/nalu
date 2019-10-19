@@ -1,16 +1,17 @@
-package com.luizleite.entity;
+package com.luizleite.entity
 
-import io.quarkus.test.junit.QuarkusTest;
-import org.junit.jupiter.api.Test;
+import io.quarkus.test.junit.QuarkusTest
+import org.junit.jupiter.api.Test
 
-import java.util.Date;
+import java.util.Date
 
 @QuarkusTest
-public class OperationTest {
+class OperationTest {
 
     @Test
-    public void createOperationClass() {
-        Operation operation = new Operation("STOK-CODE", new Date(), 5L, 15.3, 0.5, "Broker");
+    fun `create operation class like user`() {
+        val operation = Operation("STOK-CODE", Date(), 5L, 15.3, 0.5, "Broker")
+
     }
 
 }
