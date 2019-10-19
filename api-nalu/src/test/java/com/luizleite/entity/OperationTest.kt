@@ -49,7 +49,7 @@ class OperationTest {
 
     @Test
     fun `create operation class total operation add field without taxes`() {
-        var operation = Operation("STOCK-CODE", Date(), 5L, 15.3, 0.5, "Broker")
+        var operation = Operation("STOCK-CODE", Date(), 5L, 15.3, "Broker")
         assertEquals(actual = operation.total, expected = 76.5)
     }
 }
