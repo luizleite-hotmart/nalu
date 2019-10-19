@@ -19,4 +19,14 @@ class OperationTest {
         assertEquals(operation.broker, "Broker")
     }
 
+    @Test
+    fun `create operation class like user without tax`() {
+        var operation = Operation("STOK-CODE", Date(), 5L, 15.3, "Broker")
+        assertEquals(operation.stockName, "STOK-CODE")
+        assertEquals(operation.count, 5L)
+        assertEquals(operation.value, 15.3)
+        assertEquals(operation.taxes, 0.0)
+        assertEquals(operation.broker, "Broker")
+    }
+
 }
