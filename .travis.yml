@@ -3,4 +3,4 @@ script:
  - mvn clean install -DskipTests
 language: java
 jdk:
- - oraclejdk8
+ - openjdk11
