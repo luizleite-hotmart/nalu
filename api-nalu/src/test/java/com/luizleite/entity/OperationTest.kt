@@ -32,7 +32,7 @@ class OperationTest {
     @Test
     fun `create operation class like user with total operation`() {
         var operation = Operation("STOK-CODE", Date(), 5L, 15.3, 0.5, "Broker")
-        assertEquals()
+        assertEquals(actual = operation.calcTotal(), expected = 77.0);
     }
 
 }

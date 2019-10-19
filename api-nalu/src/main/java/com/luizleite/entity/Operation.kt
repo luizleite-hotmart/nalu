@@ -15,5 +15,7 @@ class Operation(var stockName: String, var operationDate: Date,
                     broker = broker
             )
 
-    fun calcTotal(count: Long, value: Double, taxes: Double, ) {}
+    fun calcTotal(): Double {
+        return (count*value).plus(taxes)
+    }
 }
