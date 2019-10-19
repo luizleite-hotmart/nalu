@@ -1,6 +1,6 @@
 script:
  - cd api-nalu/
- - mvn clean install -DskipTests
+ - mvn clean compile -DskipTests
 language: java
 jdk:
  - openjdk13
