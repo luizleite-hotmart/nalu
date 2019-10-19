@@ -1,6 +1,6 @@
 script:
  - cd api-nalu/
- - mvn clean compile -DskipTests
+ - mvn clean compile
 language: java
 jdk:
  - openjdk13
