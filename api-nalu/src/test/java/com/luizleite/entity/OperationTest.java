@@ -1,6 +1,5 @@
-package com.luizleite.service;
+package com.luizleite.entity;
 
-import com.luizleite.entity.Operation;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
