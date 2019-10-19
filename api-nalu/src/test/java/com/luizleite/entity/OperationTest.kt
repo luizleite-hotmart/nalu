@@ -22,21 +22,17 @@ class OperationTest {
     @Test
     fun `create operation class like user without tax`() {
         var operation = Operation("STOK-CODE", Date(), 5L, 15.3, "Broker")
-        assertEquals(operation.stockName, "STOK-CODE")
-        assertEquals(operation.count, 5L)
-        assertEquals(operation.value, 15.3)
-        assertEquals(operation.taxes, 0.0)
-        assertEquals(operation.broker, "Broker")
+        assertEquals(actual = operation.stockName, expected = "STOK-CODE")
+        assertEquals(actual = operation.count, expected = 5L)
+        assertEquals(actual = operation.value, expected = 15.3)
+        assertEquals(actual = operation.taxes, expected = 0.0)
+        assertEquals(actual = operation.broker, expected = "Broker")
     }
 
     @Test
     fun `create operation class like user with total operation`() {
-        var operation = Operation("STOK-CODE", Date(), 5L, 15.3, 0.5, "Broker", 77.0)
-        assertEquals(operation.stockName, "STOK-CODE")
-        assertEquals(operation.count, 5L)
-        assertEquals(operation.value, 15.3)
-        assertEquals(operation.taxes, 0.5)
-        assertEquals(operation.broker, "Broker")
+        var operation = Operation("STOK-CODE", Date(), 5L, 15.3, 0.5, "Broker")
+        assertEquals()
     }
 
 }

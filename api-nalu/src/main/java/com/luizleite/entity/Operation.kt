@@ -6,5 +6,14 @@ class Operation(var stockName: String, var operationDate: Date,
                 var count: Long, var value: Double, var taxes: Double,
                 var broker: String) {
     constructor(stockName: String, operationDate: Date, count: Long, value: Double, broker: String) :
-            this(stockName, operationDate, count, value, 0.0, broker)
+            this(
+                    stockName = stockName,
+                    operationDate = operationDate,
+                    count = count,
+                    value = value,
+                    taxes = 0.0,
+                    broker = broker
+            )
+
+    fun calcTotal(count: Long, value: Double, taxes: Double, ) {}
 }
