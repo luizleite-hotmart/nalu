@@ -1,5 +1,5 @@
 script:
- - cd nalu-api/
+ - cd api-nalu/
  - mvn clean install -DskipTests
 language: java
 jdk:
