@@ -1,8 +1,6 @@
-package com.luizleite.entity
+package com.luizleiteoliveira.apinalu.entity
 
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.Id
 
 class Operation(var stockName: String, var operationDate: Date,
                 var count: Long, var value: Double, var taxes: Double,

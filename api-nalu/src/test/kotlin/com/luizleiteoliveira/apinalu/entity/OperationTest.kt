@@ -1,9 +1,9 @@
-package com.luizleite.entity
+package com.luizleiteoliveira.apinalu.entity
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
+import java.util.*
 import kotlin.test.assertEquals
-import java.util.Date
 
 @SpringBootTest
 class OperationTest {
