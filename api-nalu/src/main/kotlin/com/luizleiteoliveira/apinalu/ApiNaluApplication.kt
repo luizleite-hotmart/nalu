@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ApiNaluApplication
 
 fun main(args: Array<String>) {
-	runApplication<ApiNaluApplication>(*args)
+    runApplication<ApiNaluApplication>(*args)
 }
