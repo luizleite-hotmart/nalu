@@ -1,0 +1,12 @@
+type OperationComponent {
+    stockName: String!
+    value: Float
+    count: Int
+    operationDate: Int
+    taxes: Float
+    broker: String
+}
+
+extend type Query {
+    getStocks : OperationComponent
+}

@@ -1,4 +1,4 @@
-package com.luizleiteoliveira.apinalu.rest
+package com.luizleiteoliveira.apinalu.graphql
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import org.springframework.stereotype.Component
