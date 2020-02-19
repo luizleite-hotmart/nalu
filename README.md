@@ -11,4 +11,5 @@ I Love see how some stocks are going.
 [AlphaAdvantage](https://www.alphavantage.co/documentation/)
 
 
-[] Create API to get operations from user
+[] Create API to get operations from user  
+-
